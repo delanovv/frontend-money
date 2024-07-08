@@ -1,0 +1,65 @@
+@tailwind base;-
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply bg-black text-white font-inter;
+}
+
+h1,h2,h3,h4,h5,h6{
+  @apply font-poppins;
+}
+
+.bg-shape-radial {
+  background-image: radial-gradient(rgba(255,144,0, 0.4) -50%, transparent 50%);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.link{
+  @apply text-lg text-white;
+  @apply font-bold leading-none tracking-wider capitalize;
+  @apply transition-colors duration-300 ease-in-out;
+  @apply hover:text-primary;
+}
+
+.button {
+  @apply inline-flex items-center justify-center;
+  @apply text-lg rounded-4xl py-5 px-10 border-2;
+  @apply font-bold leading-none tracking-wide uppercase;
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.button-sm {
+  @apply inline-flex items-center justify-center;
+  @apply text-base rounded-4xl py-3 px-6 border-2;
+  @apply font-bold leading-none tracking-wide uppercase;
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.button-outline{
+  @apply border-white text-white;
+  @apply hover:bg-primary/20 hover:border-primary;
+}
+
+.button-text{
+  @apply text-white border-transparent;
+  @apply hover:bg-primary/20 hover:border-primary;
+}
+
+.button-primary{
+  @apply bg-primary border-primary text-white shadow-primary shadow-3xl;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:shadow-4xl hover:shadow-primary;
+}
+
+.button-secondary{
+  @apply bg-primary border-primary text-white;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:bg-transparent hover:border-primary hover:text-primary;
+}
+
+.input{
+    @apply w-full text-base py-3 px-6 rounded-4xl border border-primary/20 bg-transparent placeholder:text-gray-700 font-inter;
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="./script.js"></script>
+  </head>
+  <body class="bg-black">
+    <div
+      x-data="shapes"
+      class="relative overflow-hidden bg-black lg:h-screen min-h-screen w-full"
+    >
+      <template x-for="shape in shapes" :key="shape.id">
+        <div
+          class="bg-shape-radial absolute"
+          :style="'left: ' + shape.left + 'px; top: ' + shape.top + 'px; width: ' + shape.width + 'px; height: ' + shape.height + 'px;'"
+        ></div>
+      </template>
+      <div class="relative h-full w-full flex flex-col">
+        <header
+          class="container flex-shrink-0 py-5 md:py-6 lg:py-8 flex items-center justify-between"
+        >
+          <img
+            src="./assets/logo.svg"
+            alt="Logo"
+            class="w-36 md:w-42 lg:w-48"
+          />
+          <nav class="hidden lg:flex">
+            <ul class="flex items-center gap-10">
+              <li>
+                <a href="#" class="link"> about </a>
+              </li>
+              <li>
+                <a href="#" class="link"> support </a>
+              </li>
+              <li>
+                <a href="/tasks" class="link"> tasks </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="hidden lg:block">
+            <a href="signin" class="button button-outline"> login </a>
+          </div>
+          <div class="border rounded-full p-4 border-white lg:hidden">
+            <svg
+              width="24"
+              height="24"
+              class="fill-white"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.25 5C2.25 4.58579 2.58579 4.25 3 4.25H21C21.4142 4.25 21.75 4.58579 21.75 5C21.75 5.41421 21.4142 5.75 21 5.75H3C2.58579 5.75 2.25 5.41421 2.25 5Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.25 12C2.25 11.5858 2.58579 11.25 3 11.25H21C21.4142 11.25 21.75 11.5858 21.75 12C21.75 12.4142 21.4142 12.75 21 12.75H3C2.58579 12.75 2.25 12.4142 2.25 12Z"
+              />
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M2.25 19C2.25 18.5858 2.58579 18.25 3 18.25H21C21.4142 18.25 21.75 18.5858 21.75 19C21.75 19.4142 21.4142 19.75 21 19.75H3C2.58579 19.75 2.25 19.4142 2.25 19Z"
+              />
+            </svg>
+          </div>
+        </header>
+        <div
+          class="container mt-5 mb-10 lg:mt-0 lg:mb-0 lg:h-full flex-grow flex flex-col-reverse lg:flex-row items-center justify-between gap-10"
+        >
+          <div class="text-center lg:text-left lg:max-w-xl">
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold !leading-normal mb-10"
+            >
+              Start earning with
+              <span class="text-primary">traffic money</span> right now
+            </h1>
+            <a
+              href="/plans"
+              class="w-full max-w-96 lg:w-auto button button-primary"
+              >let’s try!</a
+            >
+          </div>
+          <div class="flex items-center justify-center">
+            <img
+              src="./assets/hero.png"
+              alt="Hero"
+              class="w-auto max-h-[30vh] md:max-h-[50vh] lg:max-h-[75vh] max-w-full"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

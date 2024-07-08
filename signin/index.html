@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../output.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-black">
+    <div
+      x-data="shapes"
+      class="relative overflow-hidden bg-black h-screen min-h-screen w-full"
+    >
+      <template x-for="shape in shapes" :key="shape.id">
+        <div
+          class="bg-shape-radial absolute"
+          :style="'left: ' + shape.left + 'px; top: ' + shape.top + 'px; width: ' + shape.width + 'px; height: ' + shape.height + 'px;'"
+        ></div>
+      </template>
+      <div
+        class="container relative py-10 h-full w-full flex items-center justify-center"
+      >
+        <div class="flex flex-col items-center gap-10">
+          <a href="../"
+            ><img
+              src="../assets/logo.svg"
+              alt="Logo"
+              class="w-36 md:w-42 lg:w-48"
+          /></a>
+          <div
+            class="px-8 md:px-10 lg:px-16 py-10 w-full max-w-lg bg-black border border-white/10 rounded-5xl"
+          >
+            <h1
+              class="text-3xl md:text-4xl lg:text-5xl text-white text-center mb-4"
+            >
+              Sign in
+            </h1>
+            <p
+              class="mb-6 md:mb-8 lg:mb-10 text-gray-400 text-center text-md lg:text-lg"
+            >
+              Authorize to receive information about your accounts
+            </p>
+            <div>
+              <div class="mb-6 md:mb-8">
+                <input type="text" class="input" placeholder="Login.." />
+              </div>
+              <div class="mb-6 md:mb-8 flex flex-col items-center">
+                <input type="text" class="input" placeholder="Password.." />
+                <a href="#" class="text-center mt-2 text-primary/50"
+                  >Forgot password?</a
+                >
+              </div>
+            </div>
+            <button class="button-sm button-secondary w-full">Sign in</button>
+            <div class="flex items-center justify-center">
+              <a
+                href="../signup"
+                class="text-center mt-2 text-primary/50 mx-auto"
+                >Dont have an account?</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>
